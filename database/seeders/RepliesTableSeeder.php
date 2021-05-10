@@ -9,7 +9,6 @@ class RepliesTableSeeder extends Seeder
 {
     public function run()
     {
-        $data = Reply::factory()->times(1000)->make();
-        Reply::insert($data->toArray());
+        $data = Reply::factory()->times(1000)->create();
     }
 }
