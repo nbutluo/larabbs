@@ -34,7 +34,7 @@
             <a class="dropdown-item" href="">编辑资料</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" id="logout" href="#">
-              <form action="{{ route('logout') }}" method="POST">
+              <form action="{{ route('logout') }}" method="POST" onsubmit="return confirm('确定退出吗？')">
                 {{ csrf_field() }}
                 <button class="btn btn-block btn-danger" type="submit" name="button">退出</button>
               </form>
